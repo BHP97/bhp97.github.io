@@ -58,7 +58,35 @@ body{background:#2F3337}
 @media(max-width:1000px){.projects{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:750px){.projects{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:480px){.projects{grid-template-columns:1fr}}
-.project.wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,3fr);column-gap:28px;padding:0}.project.wide .wide-body{padding:22px 24px 26px 0}.project.wide .wide-body .number{padding:0}.project.wide h3{margin:8px 0 18px}.fmts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.fmt{padding:0!important;border-top:1px solid rgba(201,169,110,.35);padding-top:14px!important}.fmt-label{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#C9A96E;margin-bottom:6px}.fmt h4{font:500 18px/1.25 'Playfair Display',Georgia,serif;color:#F3EEE4;margin:0 0 8px}.fmt p{margin:0}@media(max-width:1000px){.fmts{grid-template-columns:1fr;gap:16px}}@media(max-width:750px){.project.wide{grid-template-columns:1fr}.project.wide .wide-body{padding:18px 20px 22px}}.project.wide{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch}.keyart{background:#1E2124;display:flex;align-items:center;overflow:hidden}.keyart img{width:100%;height:auto;aspect-ratio:16/9;display:block}.project.wide .fmts{grid-template-columns:1fr;gap:16px}.project.wide .fmt h4{font-size:17px;margin-bottom:6px}.project.wide .wide-body{padding:22px 28px 24px 0}@media(max-width:750px){.project.wide{grid-template-columns:1fr}.project.wide .wide-body{padding:18px 20px 22px}}.project>.keyart{padding:0!important}</style>
+.project.wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,3fr);column-gap:28px;padding:0}.project.wide .wide-body{padding:22px 24px 26px 0}.project.wide .wide-body .number{padding:0}.project.wide h3{margin:8px 0 18px}.fmts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.fmt{padding:0!important;border-top:1px solid rgba(201,169,110,.35);padding-top:14px!important}.fmt-label{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#C9A96E;margin-bottom:6px}.fmt h4{font:500 18px/1.25 'Playfair Display',Georgia,serif;color:#F3EEE4;margin:0 0 8px}.fmt p{margin:0}@media(max-width:1000px){.fmts{grid-template-columns:1fr;gap:16px}}@media(max-width:750px){.project.wide{grid-template-columns:1fr}.project.wide .wide-body{padding:18px 20px 22px}}.project.wide{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch}.keyart{background:#1E2124;display:flex;align-items:center;overflow:hidden}.keyart img{width:100%;height:auto;aspect-ratio:16/9;display:block}.project.wide .fmts{grid-template-columns:1fr;gap:16px}.project.wide .fmt h4{font-size:17px;margin-bottom:6px}.project.wide .wide-body{padding:22px 28px 24px 0}@media(max-width:750px){.project.wide{grid-template-columns:1fr}.project.wide .wide-body{padding:18px 20px 22px}}.project>.keyart{padding:0!important}
+.project{cursor:pointer;transition:transform .2s ease,border-color .2s ease}
+.project:hover{transform:translateY(-3px);border-color:rgba(201,169,110,.7)}
+.project:focus-visible{outline:2px solid #C9A96E;outline-offset:3px}
+.pm-back{position:fixed;inset:0;background:rgba(10,12,14,.82);display:none;align-items:center;justify-content:center;z-index:1000;padding:24px}
+.pm-back.open{display:flex}
+.pm{position:relative;background:#33373B;border:1px solid rgba(201,169,110,.55);max-width:980px;width:100%;max-height:calc(100vh - 48px);overflow:auto;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.pm.wide-art{grid-template-columns:1fr}
+.pm-art{background:#1E2124;display:flex;align-items:flex-start}
+.pm-art img{width:100%;height:auto;display:block}
+.pm-art .type-poster{width:100%;aspect-ratio:3/4}
+.pm-body{padding:34px 36px 32px}
+.pm-close{position:absolute;top:10px;right:12px;background:none;border:0;color:#F3EEE4;font-size:30px;line-height:1;cursor:pointer;padding:6px 10px;z-index:2}
+.pm-kicker{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#C9A96E}
+.pm h2{font:500 34px/1.15 'Playfair Display',Georgia,serif;color:#F3EEE4;margin:10px 0 6px}
+.pm-meta{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#B9B4AA;margin:0 0 18px}
+.pm-log{font-size:16px;line-height:1.65;color:#E7E2D8;margin:0 0 20px}
+.pm-note{font-style:italic;color:#B9B4AA;margin:-8px 0 20px;font-size:14px}
+.pm dl{margin:0 0 22px;display:grid;grid-template-columns:auto 1fr;gap:8px 18px;font-size:14px}
+.pm dt{color:#C9A96E;letter-spacing:.06em;text-transform:uppercase;font-size:11px;padding-top:3px;white-space:nowrap}
+.pm dd{margin:0;color:#F3EEE4}
+.pm-fmt{border-top:1px solid rgba(201,169,110,.35);padding-top:18px;margin-top:18px}
+.pm-fmt h3{font:500 22px/1.2 'Playfair Display',Georgia,serif;color:#F3EEE4;margin:6px 0 4px}
+.pm-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.pm-btn{display:inline-block;padding:12px 20px;border:1px solid #C9A96E;color:#C9A96E;text-decoration:none;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.pm-btn.primary{background:#C9A96E;color:#2A2E32}
+.pm-btn:hover{opacity:.85}
+@media(max-width:750px){.pm{grid-template-columns:1fr}.pm-body{padding:24px 22px 26px}.pm h2{font-size:28px}.pm-back{padding:0}.pm{max-height:100vh;height:100%;border:0}}
+</style>
 </head>
 <body>
 <header class="top"><nav aria-label="Main navigation" class="wrap nav"><a class="wordmark" href="#home">BUTLER HALL PRODUCTIONS</a><div class="links"><a href="#about">About</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div></nav></header>
@@ -77,4 +105,22 @@ body{background:#2F3337}
 </div></div></section>
 <section class="section contact" id="contact"><div class="wrap"><div class="kicker">Get in Touch</div><h2>Let's tell great stories.</h2><p>For business inquiries and collaborations, please contact:</p><a class="contact-email" href="mailto:matt@butlerhallproductions.com">matt@butlerhallproductions.com</a></div></section>
 </main><footer class="footer"><div class="wrap"><span>© <span id="year"></span> Butler Hall Productions</span><span>Strong Stories, Well Told.</span></div></footer><script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-</body></html>
+<div class="pm-back" id="pmBack" aria-hidden="true"><div class="pm" role="dialog" aria-modal="true" aria-labelledby="pmTitle"><button class="pm-close" aria-label="Close">&times;</button><div class="pm-art"></div><div class="pm-body"></div></div></div><script>(function(){var D={"#iHunt": {"kicker": "Multiplatform", "based": "Based on the novels and tabletop RPG by Olivia Hill &amp; Filamena Young", "assoc": "In association with Anarchists United", "formats": [{"label": "Feature", "title": "#iHunt: Killing Monsters in the Gig Economy", "meta": "Feature film \u00b7 Horror-comedy \u00b7 Pre-production", "credits": [["Director", "Scott Glosserman"], ["Writer", "Olivia Hill"], ["Producers", "Olivia Hill, Stirling Matheson, Matthew Skrobalak, Filamena Young"], ["Executive Producers", "Lilly Wachowski, Lawrence Mattis, Sarah Marie Flores"]]}, {"label": "Series", "title": "#iHunt", "meta": "Television series \u00b7 Horror \u00b7 In development", "credits": [["Creator", "Olivia Hill"], ["Showrunner", "Anne Cofell Saunders"], ["Writers", "Olivia Hill &amp; Filamena Young"]]}, {"label": "Vertical", "title": "#iHunt: A Night in the Life", "meta": "Vertical series \u00b7 Horror \u00b7 In development", "credits": [["Writers", "Olivia Hill &amp; Filamena Young"], ["Producers", "Olivia Hill, Filamena Young"]]}], "links": [["Read the Variety exclusive", "https://variety.com/2026/film/news/ihunt-killing-monsters-in-the-gig-economy-movie-1236930441/"], ["Watch the commercial", "https://www.ihunt.media/a-word-from-our-sponsor/"], ["Visit ihunt.media", "https://www.ihunt.media"]]}, "Sex Magick": {"meta": "Feature film \u00b7 Comedy \u00b7 In development", "credits": [["Writer", "Nicholas Brown"], ["Producers", "Nicholas Brown, Spencer McLaren, Matthew Skrobalak"]], "note": "Adapted from Nicholas Brown&#8217;s award-winning play."}, "Active Nearby": {"meta": "Half-hour series \u00b7 Comedy \u00b7 In development", "credits": [["Creator", "Matthew Skrobalak"]]}, "Merwin Point": {"meta": "One-hour series \u00b7 Drama \u00b7 In development", "credits": [["Written by", "Kevin A. Reilly"], ["Co-writer", "John Meyer"], ["Producers", "John Meyer, Kevin A. Reilly, Matthew Skrobalak"]]}, "The Boards": {"meta": "Feature film \u00b7 Comedy \u00b7 In development", "credits": [["Writer", "Kevin A. Reilly"], ["Producers", "John Meyer, Kevin A. Reilly, Matthew Skrobalak"]]}, "Transit Stories": {"meta": "Anthology series \u00b7 Drama \u00b7 In development", "credits": [["Creator", "Kevin A. Reilly"]]}, "Shucked": {"meta": "Feature film \u00b7 Biography \u00b7 In development", "credits": [["Based on the book by", "Erin Byers Murray"], ["Writer", "Kevin A. Reilly"], ["Producers", "John Meyer, Kevin A. Reilly"]]}, "Anomaly": {"meta": "Feature film \u00b7 Science fiction \u00b7 In development", "credits": [["Writer", "Kevin A. Reilly"]]}};var EMAIL='matt@butlerhallproductions.com';
+var back=document.getElementById('pmBack'),box=back.querySelector('.pm'),art=back.querySelector('.pm-art'),body=back.querySelector('.pm-body'),last=null;
+function dl(c){return '<dl>'+c.map(function(r){return '<dt>'+r[0]+'</dt><dd>'+r[1]+'</dd>'}).join('')+'</dl>'}
+function open(card){var t=card.querySelector('h3').textContent.trim(),d=D[t];if(!d)return;last=card;
+var media=card.querySelector('.keyart img,.poster img');art.innerHTML='';
+if(media){var im=media.cloneNode();im.removeAttribute('loading');art.appendChild(im)}else{var tp=card.querySelector('.type-poster');if(tp)art.appendChild(tp.cloneNode(true))}
+box.classList.toggle('wide-art',!!card.querySelector('.keyart'));
+var h=(d.kicker?'<span class="pm-kicker">'+d.kicker+'</span>':'')+'<h2 id="pmTitle">'+t+'</h2>';
+if(d.formats){h+='<p class="pm-meta">'+d.based+'</p>';if(d.assoc)h+='<p class="pm-note">'+d.assoc+'</p>';
+var fl=card.querySelectorAll('.fmt p');d.formats.forEach(function(f,i){h+='<div class="pm-fmt"><span class="pm-kicker">'+f.label+'</span><h3>'+f.title+'</h3><p class="pm-meta">'+f.meta+'</p><p class="pm-log">'+(fl[i]?fl[i].innerHTML:'')+'</p>'+dl(f.credits)+'</div>'})}
+else{h+='<p class="pm-meta">'+d.meta+'</p><p class="pm-log">'+card.querySelector('h3 + p, div > p').innerHTML+'</p>';if(d.note)h+='<p class="pm-note">'+d.note+'</p>';h+=dl(d.credits)}
+h+='<div class="pm-actions"><a class="pm-btn primary" href="mailto:'+EMAIL+'?subject='+encodeURIComponent('Inquiry \u2014 '+t)+'">Inquire about this project</a>';
+(d.links||[]).forEach(function(l){h+='<a class="pm-btn" href="'+l[1]+'" target="_blank" rel="noopener">'+l[0]+'</a>'});h+='</div>';
+body.innerHTML=h;back.classList.add('open');back.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';box.scrollTop=0;back.querySelector('.pm-close').focus()}
+function close(){back.classList.remove('open');back.setAttribute('aria-hidden','true');document.body.style.overflow='';if(last)last.focus()}
+document.querySelectorAll('.projects .project').forEach(function(c){c.setAttribute('tabindex','0');c.setAttribute('role','button');
+c.addEventListener('click',function(){open(c)});c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(c)}})});
+back.addEventListener('click',function(e){if(e.target===back)close()});back.querySelector('.pm-close').addEventListener('click',close);
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&back.classList.contains('open'))close()});})();</script></body></html>
